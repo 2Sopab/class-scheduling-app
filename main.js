@@ -68,6 +68,16 @@ setTimeout((() => {
             }
             let jsonData = JSON.parse(body);
             jsonData.forEach(element => {
+                let courseNumber = element.ident;
+                request.get(`https://soc.courseoff.com/gatech/terms/201901/majors/${majorArr[i]}/courses/${courseNumber}/sections`, (error, response, body) => {
+                    if (error != null) {
+                        console.log(error);
+                    }
+                    let jsonData = JSON.parse(body);
+                    jsonData.forEach(element => {
+                        console.log(element);
+                    });
+                });
                 console.log(element);
             });
         });
