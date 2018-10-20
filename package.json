@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/2Sopab/class-scheduling-app#readme",
   "dependencies": {
-    "ajax-request": "^1.2.3"
+    "ajax-request": "^1.2.3",
+    "sequelize": "^4.40.0"
   }
 }
