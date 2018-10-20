@@ -1,1 +1,5 @@
-public class Class
+package com.sapob.client.data;
+
+public class Class {
+
+}

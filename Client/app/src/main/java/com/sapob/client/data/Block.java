@@ -1,3 +1,5 @@
+package com.sapob.client.data;
+
 import java.time.LocalTime;
 
 public class Block {
@@ -25,13 +27,13 @@ public class Block {
 
     @Override 
     public boolean equals(Object o) {
-        if(this == 0) {
+        if(this == o) {
             return true; 
         }
         if(!(o instanceof Block)) {
             return false;
         }
         Block a = (Block)o;
-        return a.day == o.day && a.start.equals(this.start) && a.end.equals(this.end); 
+        return a.day == this.day && a.start.equals(this.start) && a.end.equals(this.end);
     }
 }

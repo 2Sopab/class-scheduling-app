@@ -1,14 +1,16 @@
+package com.sapob.client.data;
+
 public class Attribute {
-    private int prefrence;
+    private int preference;
     private Section preferredSection; 
 
-    public Attribute(int prefrence, Section preferredSection) {
-        this.prefrence = prefrence;
+    public Attribute(int preference, Section preferredSection) {
+        this.preference = preference;
         this.preferredSection = preferredSection;
     }
 
-    public int getPrefrence() {
-        return this.prefrence;
+    public int getPreference() {
+        return this.preference;
     }
 
     public Section getPreferredSection() {
@@ -24,6 +26,6 @@ public class Attribute {
             return false;
         }
         Attribute a = (Attribute)o;
-        return this.prefrence == a.prefrence && this.preferredSection.equals(a.preferredSection);
+        return this.preference == a.preference && this.preferredSection.equals(a.preferredSection);
     }
 }

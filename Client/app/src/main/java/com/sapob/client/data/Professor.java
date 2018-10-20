@@ -1,3 +1,5 @@
+package com.sapob.client.data;
+
 public class Professor {
     private final String name; 
     private double GPA;
@@ -33,7 +35,7 @@ public class Professor {
             return true;
         if(!(o instanceof Professor))
             return false; 
-        a = (Professor)o;
+        Professor a = (Professor)o;
         return this.name.equals(a.name) && this.GPA == a.GPA && this.rating == a.rating;
     }
 }

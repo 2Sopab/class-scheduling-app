@@ -1,11 +1,15 @@
+package com.sapob.client.data;
+
+import java.util.List;
+
 public class Section {
-    private Course courseName; 
+    private Course courseName;
     private int CRN; 
     private Professor prof;
     private int remainingSpace;
-    private Arraylist<Block> blocks; 
+    private List<Block> blocks;
 
-    public Section(String courseName, int CRN, Professor prof, int remainingSpace, Arraylist<Block> blocks) {
+    public Section(Course courseName, int CRN, Professor prof, int remainingSpace, List<Block> blocks) {
         this.courseName = courseName;
         this.CRN = CRN;
         this.prof = prof;
@@ -29,7 +33,7 @@ public class Section {
         return this.remainingSpace;
     }
 
-    public ArrayList<Block> getBlocks() {
+    public List<Block> getBlocks() {
         return this.blocks;
     }
 
@@ -37,7 +41,7 @@ public class Section {
         return remainingSpace <= 0; 
     }
 
-    @Ovveride 
+    @Override
     public boolean equals(Object o) {
         if(this == o) {
             return true;

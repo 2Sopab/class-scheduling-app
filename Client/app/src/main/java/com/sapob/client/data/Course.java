@@ -1,4 +1,8 @@
-public class Course {
+package com.sapob.client.data;
+
+import java.util.ArrayList;
+
+public class Course implements Comparable<Course> {
     private String subject;
     private int number;
     private int creditHours;
@@ -29,7 +33,7 @@ public class Course {
 
     @Override
     public boolean equals(Object o) {
-        if(this == 0) {
+        if(this == o) {
             return true;
         }
         if(!(o instanceof Course)) {
@@ -39,4 +43,8 @@ public class Course {
         return this.subject.equals(a.subject) && this.number == a.number;
     }
 
+    @Override
+    public int compareTo(Course o) {
+        return this.id.compareTo(o.getID());
+    }
 }
