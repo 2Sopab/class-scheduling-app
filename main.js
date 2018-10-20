@@ -78,9 +78,9 @@ setTimeout((() => {
                         console.log(element);
                     });
                 });
-                console.log(element);
+                console.log(element.ident);
             });
         });
     }
-}), 5000)
+}), 7000)
 
