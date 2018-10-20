@@ -18,6 +18,8 @@
   "homepage": "https://github.com/2Sopab/class-scheduling-app#readme",
   "dependencies": {
     "ajax-request": "^1.2.3",
+    "body-parser": "^1.18.3",
+    "mysql": "^2.16.0",
     "node-fetch": "^2.1.2",
     "sequelize": "^4.40.0"
   }
