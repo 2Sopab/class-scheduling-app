@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/2Sopab/class-scheduling-app/issues"
   },
-  "homepage": "https://github.com/2Sopab/class-scheduling-app#readme"
+  "homepage": "https://github.com/2Sopab/class-scheduling-app#readme",
+  "dependencies": {
+    "ajax-request": "^1.2.3"
+  }
 }
