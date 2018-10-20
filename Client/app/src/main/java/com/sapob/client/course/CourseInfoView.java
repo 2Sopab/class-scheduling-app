@@ -15,19 +15,17 @@ import com.sapob.client.data.component.Course;
 
 public class CourseInfoView extends BaseActivity {
     private Course course;
-    private CollapsingToolbarLayout toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        toolbar = findViewById(R.id.toolbar_layout);
         Intent intent = getIntent();
         course = Application.getDataModel().getFromUUID(intent.getIntExtra("course_uuid", 0));
-        toolbar.setTitle(course.getIdentifier());
 
         setContentView(R.layout.activity_course_info_view);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(course.getIdentifier());
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

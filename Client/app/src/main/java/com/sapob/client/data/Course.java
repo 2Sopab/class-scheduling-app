@@ -1,5 +1,7 @@
 package com.sapob.client.data;
 
+import com.sapob.client.data.component.Section;
+
 import java.util.ArrayList;
 
 public class Course implements Comparable<Course> {
@@ -23,7 +25,7 @@ public class Course implements Comparable<Course> {
         return this.number;
     }
 
-    public int getCreditHorus() {
+    public int getCreditHours() {
         return this.creditHours;
     }
 
