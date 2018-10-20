@@ -1,0 +1,4 @@
+runtime: nodejs
+env: flex
+beta_settings:
+  cloud_sql_instances: smart-host-220001:us-east1:scrape-data

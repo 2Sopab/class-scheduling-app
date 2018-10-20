@@ -21,6 +21,8 @@
   "dependencies": {
     "ajax-request": "^1.2.3",
     "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
     "fs": "0.0.1-security",
     "mysql": "^2.16.0",
     "node-fetch": "^2.1.2",
