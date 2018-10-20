@@ -13,4 +13,9 @@ public class Course implements Comparable<Course> {
     public String getName() {
         return name;
     }
+
+    @Override
+    public int compareTo(Course o) {
+        return this.id.compareTo(o.getID());
+    }
 }
