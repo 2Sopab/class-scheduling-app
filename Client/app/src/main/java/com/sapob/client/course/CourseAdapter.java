@@ -1,16 +1,20 @@
 package com.sapob.client.course;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.sapob.client.BaseActivity;
 import com.sapob.client.R;
 import java.util.List;
 
 public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder> {
     private List<Course> dataSet;
+    private BaseActivity parent;
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final TextView nameView;
         private final TextView idView;
@@ -34,14 +38,20 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
             int position = getAdapterPosition();
             if (position != RecyclerView.NO_POSITION && position < dataSet.size()) {
                 Course c = dataSet.get(position);
+                Intent intent = new Intent(parent, CourseInfoView.class);
+                intent.putExtra("course_id", c.getID());
+                parent.startActivity(intent);
+                parent.overridePendingTransitionEnter();
             }
         }
     }
 
-    public CourseAdapter(List<Course> dataSet) {
+    public CourseAdapter(List<Course> dataSet, BaseActivity newParent) {
         this.dataSet = dataSet;
+        parent = newParent;
     }
 
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.course_row_item, viewGroup, false);

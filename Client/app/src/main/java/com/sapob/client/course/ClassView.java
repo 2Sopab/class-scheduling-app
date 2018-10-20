@@ -8,13 +8,15 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+
+import com.sapob.client.BaseActivity;
 import com.sapob.client.R;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class ClassView extends AppCompatActivity {
+public class ClassView extends BaseActivity {
     private RecyclerView classRecyclerView;
     private CourseAdapter courseAdapter;
     private RecyclerView.LayoutManager courseLayoutManager;
@@ -49,7 +51,7 @@ public class ClassView extends AppCompatActivity {
         setContentView(R.layout.activity_class_view);
         courseLayoutManager = new LinearLayoutManager(this);
         classRecyclerView = findViewById(R.id.courseView);
-        courseAdapter = new CourseAdapter(dataSet);
+        courseAdapter = new CourseAdapter(dataSet, this);
         classRecyclerView.setAdapter(courseAdapter);
         classRecyclerView.setLayoutManager(courseLayoutManager);
 
