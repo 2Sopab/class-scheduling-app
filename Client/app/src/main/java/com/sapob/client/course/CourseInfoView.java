@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 import com.sapob.client.BaseActivity;
 import com.sapob.client.R;
@@ -16,16 +17,16 @@ public class CourseInfoView extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_info_view);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        Bundle resultIntent = getIntent().getExtras();
+        String id = "";
+        if(resultIntent != null)
+        {
+            id = resultIntent.getString("course_id");
+        }
+
+        TextView textElement = (TextView) findViewById(R.id.course_info_title);
+        textElement.setText(id);
+
     }
 }

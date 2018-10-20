@@ -3,24 +3,24 @@ package com.sapob.client.data;
 import java.util.ArrayList;
 
 public class Course implements Comparable<Course> {
-    private String subject;
-    private int number;
+    private final String id;
+    private final String name;
     private int creditHours;
     private ArrayList<Section> sections;
 
-    public Course(String subject, int number, int creditHours, ArrayList<Section> sections) {
-        this.subject = subject;
-        this.number = number;
+    public Course(String id, String name, int creditHours, ArrayList<Section> sections) {
+        this.id = id;
+        this.name = name;
         this.creditHours = creditHours;
         this.sections = sections;
     }
 
-    public String getSubject() {
-        return subject;
+    public String getID() {
+        return id;
     }
 
-    public int getNumber() {
-        return this.number;
+    public String getName() {
+        return this.name;
     }
 
     public int getCreditHorus() {
@@ -40,11 +40,11 @@ public class Course implements Comparable<Course> {
             return false;
         }
         Course a = (Course)o; 
-        return this.subject.equals(a.subject) && this.number == a.number;
+        return this.name.equals(a.name) && this.id.equals(a.getID());
     }
 
     @Override
     public int compareTo(Course o) {
-        return this.subject.compareTo(o.getSubject());
+        return this.name.compareTo(o.getName());
     }
 }

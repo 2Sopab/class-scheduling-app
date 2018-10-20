@@ -12,6 +12,8 @@ import com.sapob.client.BaseActivity;
 import com.sapob.client.R;
 import java.util.List;
 
+import com.sapob.client.data.*;
+
 public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder> {
     private List<Course> dataSet;
     private BaseActivity parent;

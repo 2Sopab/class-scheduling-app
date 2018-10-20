@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-
+import com.sapob.client.data.*;
 
 public class ClassView extends BaseActivity {
     private RecyclerView classRecyclerView;
@@ -24,20 +24,20 @@ public class ClassView extends BaseActivity {
     private RecyclerView.LayoutManager courseLayoutManager;
 
     private final Course[] courses = new Course[]{
-            new Course("CS 1331", "Intro to Object Oriented Programming"),
-            new Course("ISYE 3770", "Statistics and Applications"),
-            new Course("CS 2050", "Intro to Discrete Math"),
-            new Course("MATH 1554", "Linear Algebra"),
-            new Course("MATH 1553", "Integral Calculus"),
-            new Course("MATH 2550", "Multivariable Calculus"),
-            new Course("CHEM 1211k", "General Chemistry I"),
-            new Course("CHEM 1212k", "General Chemistry II"),
-            new Course("ENGL 1101", "English Composition I"),
-            new Course("ENGL 1102", "English Composition II"),
-            new Course("MATH 3012", "Applied Combinatorics"),
-            new Course("CS 2340", "Objects and Design"),
-            new Course("CS 3510", "Design & Analysis of Algorithms"),
-            new Course("CS 1301", "Introduction to Computing")};
+            new Course("CS 1331", "Intro to Object Oriented Programming", 3, null),
+            new Course("ISYE 3770", "Statistics and Applications", 3, null),
+            new Course("CS 2050", "Intro to Discrete Math", 3, null),
+            new Course("MATH 1554", "Linear Algebra", 3, null),
+            new Course("MATH 1553", "Integral Calculus", 3, null),
+            new Course("MATH 2550", "Multivariable Calculus", 3, null),
+            new Course("CHEM 1211k", "General Chemistry I", 3, null),
+            new Course("CHEM 1212k", "General Chemistry II", 3, null),
+            new Course("ENGL 1101", "English Composition I", 3, null),
+            new Course("ENGL 1102", "English Composition II", 3, null),
+            new Course("MATH 3012", "Applied Combinatorics", 3, null),
+            new Course("CS 2340", "Objects and Design", 3, null),
+            new Course("CS 3510", "Design & Analysis of Algorithms", 3, null),
+            new Course("CS 1301", "Introduction to Computing", 3, null) };
     private final ArrayList<Course> sampleData = new ArrayList<>(Arrays.asList(courses));
     private final ArrayList<Course> dataSet;
 
