@@ -1,8 +1,8 @@
-package com.sapob.client.data;
+package com.sapob.client.data.component;
 
 public class Attribute {
     private int preference;
-    private Section preferredSection; 
+    private Section preferredSection;
 
     public Attribute(int preference, Section preferredSection) {
         this.preference = preference;

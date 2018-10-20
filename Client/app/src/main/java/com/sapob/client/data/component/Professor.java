@@ -1,4 +1,4 @@
-package com.sapob.client.data;
+package com.sapob.client.data.component;
 
 public class Professor {
     private final String name; 

@@ -1,4 +1,4 @@
-package com.sapob.client.data;
+package com.sapob.client.data.component;
 
 import java.util.List;
 

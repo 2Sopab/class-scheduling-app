@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.sapob.client.BaseActivity;
 import com.sapob.client.R;
+import com.sapob.client.data.component.Course;
+
 import java.util.List;
 
 public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder> {
@@ -39,7 +41,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
             if (position != RecyclerView.NO_POSITION && position < dataSet.size()) {
                 Course c = dataSet.get(position);
                 Intent intent = new Intent(parent, CourseInfoView.class);
-                intent.putExtra("course_id", c.getID());
+                intent.putExtra("course_uuid", c.getUUID());
                 parent.startActivity(intent);
                 parent.overridePendingTransitionEnter();
             }
@@ -60,8 +62,8 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        viewHolder.getIdView().setText(dataSet.get(position).getID());
-        viewHolder.getNameView().setText(dataSet.get(position).getName());
+        viewHolder.getIdView().setText(dataSet.get(position).getIdentifier());
+        viewHolder.getNameView().setText(dataSet.get(position).getTitle());
     }
 
     @Override
