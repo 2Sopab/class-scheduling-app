@@ -1,4 +1,4 @@
-package com.example.langt.app;
+package com.sapob.client;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.langt.app", appContext.getPackageName());
+        assertEquals("com.sapob.client", appContext.getPackageName());
     }
 }

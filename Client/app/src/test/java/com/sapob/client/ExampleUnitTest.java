@@ -1,4 +1,4 @@
-package com.example.langt.app;
+package com.sapob.client;
 
 import org.junit.Test;
 
