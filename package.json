@@ -4,7 +4,9 @@
   "description": "Hackathon project",
   "main": "main.js",
   "scripts": {
-    "test": "debug"
+    "test": "debug",
+    "start": "node main.js",
+    "deploy": "gcloud app deploy"
   },
   "repository": {
     "type": "git",
@@ -19,8 +21,10 @@
   "dependencies": {
     "ajax-request": "^1.2.3",
     "body-parser": "^1.18.3",
+    "fs": "0.0.1-security",
     "mysql": "^2.16.0",
     "node-fetch": "^2.1.2",
+    "request": "^2.88.0",
     "sequelize": "^4.40.0"
   }
 }
