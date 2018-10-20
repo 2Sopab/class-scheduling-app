@@ -1,210 +1,385 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".scheduleView">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="vertical" android:layout_weight="1" android:layout_height="match_parent">
+        <TableLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+            <TableRow>
+                <TextView android:text="   "></TextView>
+                <TextView android:text="Mon   "
+                    android:layout_gravity="center"></TextView>
+                <TextView android:text="Tue   "
+                    android:layout_gravity="center"></TextView>
+                <TextView android:text="Wed   "
+                    android:layout_gravity="center"></TextView>
+                <TextView android:text="Thu   "
+                    android:layout_gravity="center"></TextView>
+                <TextView android:text="Fri   "
+                    android:layout_gravity="center"></TextView>
+            </TableRow>
+        </TableLayout>
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TableRow>
+                    <TextView android:text="8"></TextView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:stretchColumns = "1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-    <TableRow>
-        <TextView
-            android:layout_gravity="start"
-            android:text="    "
-            android:textColor="#000"
-            android:textSize="12dp" />
-        <TextView
-            android:layout_gravity="center"
-            android:text="Monday"
-            android:textColor="#000"
-            android:textSize="12dp" />
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <TextView
-            android:layout_gravity="center"
-            android:text="Tuesday"
-            android:textColor="#000"
-            android:textSize="12dp" />
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <TextView
-            android:layout_gravity="center"
-            android:text="Wednesday"
-            android:textColor="#000"
-            android:textSize="12dp" />
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <TextView
-            android:layout_gravity="center"
-            android:text="Thursday"
-            android:textColor="#000"
-            android:textSize="12dp" />
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <TextView
-            android:layout_gravity="center"
-            android:text="Friday"
-            android:textColor="#000"
-            android:textSize="12dp" />
-    </TableRow>
-    <TableRow>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="9"></TextView>
 
-        <TextView
-            android:text="8"
-            android:textSize="10dp"
-            android:textColor="#000"
-            android:layout_gravity="left" />
+                    <Button
+                        android:id="@+id/button6"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            android:onClick="expandClassInfo"/>
+                    <Button
+                        android:id="@+id/button7"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            android:onClick="expandClassInfo"/>
+                    <Button
+                        android:id="@+id/button8"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            android:onClick="expandClassInfo"/>
+                    <Button
+                        android:id="@+id/button9"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            android:onClick="expandClassInfo"/>
+                    <Button
+                        android:id="@+id/button10"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            android:onClick="expandClassInfo"/>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="10"></TextView>
 
-        <TextView
-            />
+                    <Button
+                        android:id="@+id/button11"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <TextView
-            />
-        <TextView
-            />
-        <TextView
-            />
-        <TextView
-            />
+                    <Button
+                        android:id="@+id/button12"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:text="9"
-            android:textSize="10dp"
-            android:textColor="#000"
-            android:layout_gravity="left"
-            />
+                    <Button
+                        android:id="@+id/button13"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+                    <Button
+                        android:id="@+id/button14"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+                    <Button
+                        android:id="@+id/button15"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="11"></TextView>
 
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+                    <Button
+                        android:id="@+id/button16"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+                    <Button
+                        android:id="@+id/button17"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <TextView
-            />
+                    <Button
+                        android:id="@+id/button18"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <TextView
-            />
-        <TextView
-            />
-        <TextView
-            />
-        <TextView
-            />
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:text="10"
-            android:textSize="10dp"
-            android:textColor="#000"
-            android:layout_gravity="left"
-            />
+                    <Button
+                        android:id="@+id/button19"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+                    <Button
+                        android:id="@+id/button20"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button12"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="12"></TextView>
 
-        <Button
-            android:id="@+id/button13"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+                    <Button
+                        android:id="@+id/button21"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button14"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+                    <Button
+                        android:id="@+id/button22"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <Button
-            android:id="@+id/button15"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+                    <Button
+                        android:id="@+id/button23"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <TextView
-            />
+                    <Button
+                        android:id="@+id/button24"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
 
-        <TextView
-            />
-        <TextView
-            />
-        <TextView
-            />
-        <TextView
-            />
-    </TableRow>
-</TableLayout>
+                    <Button
+                        android:id="@+id/button25"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="1"></TextView>
+
+                    <Button
+                        android:id="@+id/button26"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button27"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button28"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button29"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button30"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="2"></TextView>
+
+                    <Button
+                        android:id="@+id/button31"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button32"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button33"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button34"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button35"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="3"></TextView>
+
+                    <Button
+                        android:id="@+id/button36"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button37"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button38"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button39"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <Button
+                        android:id="@+id/button40"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        android:onClick="expandClassInfo"/>
+
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                    <TextView></TextView>
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="vertical" android:layout_weight="1" android:layout_height="match_parent">
+        <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="match_parent"></LinearLayout>
+    </LinearLayout>
+</LinearLayout>
