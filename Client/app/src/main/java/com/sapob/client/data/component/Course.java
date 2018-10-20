@@ -8,29 +8,29 @@ public class Course implements Comparable<Course> {
     private String number;
     private int creditHours;
     private String title;
-    private List<Section> sections;
+    private List<Block> blocks;
     private final int uuid;
     private static int LAST_UUID = 0;
 
-    public Course(String identifier, String title, int creditHours, List<Section> sections) {
+    public Course(String identifier, String title, int creditHours, List<Block> blocks) {
         uuid = LAST_UUID++;
         this.subject = identifier.split("[ ]")[0];
         this.number = identifier.split("[ ]")[1];
         this.title = title;
         this.creditHours = creditHours;
-        this.sections = sections;
+        this.blocks = blocks;
     }
 
-    public Course(String identifier, String title, List<Section> sections) {
-        this(identifier, title, 3, sections);
+    public Course(String identifier, String title, List<Block> blocks) {
+        this(identifier, title, 3, blocks);
     }
 
     public Course(String identifier, String title) {
-        this(identifier, title, 3, new ArrayList<Section>());
+        this(identifier, title, 3, new ArrayList<Block>());
     }
 
     public Course(String identifier, String title, int creditHours) {
-        this(identifier, title, creditHours, new ArrayList<Section>());
+        this(identifier, title, creditHours, new ArrayList<Block>());
     }
 
     public String getSubject() {
@@ -49,8 +49,8 @@ public class Course implements Comparable<Course> {
         return title;
     }
 
-    public List<Section> getSections() {
-        return this.sections;
+    public List<Block> getBlocks() {
+        return this.blocks;
     }
 
     public String getIdentifier() {

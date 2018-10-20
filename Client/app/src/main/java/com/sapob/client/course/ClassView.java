@@ -13,11 +13,8 @@ import com.sapob.client.R;
 import com.sapob.client.data.component.Course;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-
 
 public class ClassView extends BaseActivity {
     private CourseAdapter courseAdapter;
@@ -90,6 +87,8 @@ public class ClassView extends BaseActivity {
         }
         if(list.size() != 0) {
             list.add(list.size() - 1, target);
+        } else {
+            list.add(target);
         }
         return list.size() - 1;
     }

@@ -43,7 +43,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/courseSearch" />
+            app:layout_constraintTop_toBottomOf="@+id/courseSearch"
+            tools:listitem="@layout/course_row_item" />
     </FrameLayout>
 
 </LinearLayout>

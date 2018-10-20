@@ -1,20 +1,18 @@
 package com.sapob.client.data.component;
 
-import java.util.List;
-
 public class Section {
     private Course courseName;
     private int CRN; 
     private Professor prof;
     private int remainingSpace;
-    private List<Block> blocks;
+    private Block block;
 
-    public Section(Course courseName, int CRN, Professor prof, int remainingSpace, List<Block> blocks) {
+    public Section(Course courseName, int CRN, Professor prof, int remainingSpace, Block block) {
         this.courseName = courseName;
         this.CRN = CRN;
         this.prof = prof;
         this.remainingSpace = remainingSpace;
-        this.blocks = blocks; 
+        this.block = block;
     }
     
     public Course getCourseName() {
@@ -33,8 +31,8 @@ public class Section {
         return this.remainingSpace;
     }
 
-    public List<Block> getBlocks() {
-        return this.blocks;
+    public Block getBlock() {
+        return this.block;
     }
 
     public boolean isFull() {

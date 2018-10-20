@@ -1,39 +1,30 @@
 package com.sapob.client.data.component;
 
-import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Block {
-    private int day; 
-    private LocalTime start;
-    private LocalTime end;
+    private List<Section> sections;
+    private List<BlockUnit> times;
 
-    public Block(int day, LocalTime start, LocalTime end) {
-        this.day = day;
-        this.start = start;
-        this.end = end; 
+    public Block(List<Section> sections, List<BlockUnit> times) {
+        this.sections = sections;
+        this.times = times;
     }
 
-    public int getDay() {
-        return day;
+    public Block(List<BlockUnit> times) {
+        this(new ArrayList<Section>(), times);
     }
 
-    public LocalTime getStart() {
-        return start;
+    public Block() {
+        this(new ArrayList<Section>(), new ArrayList<BlockUnit>());
     }
 
-    public LocalTime getEnd() {
-        return end; 
+    public List<Section> getSections() {
+        return sections;
     }
 
-    @Override 
-    public boolean equals(Object o) {
-        if(this == o) {
-            return true; 
-        }
-        if(!(o instanceof Block)) {
-            return false;
-        }
-        Block a = (Block)o;
-        return a.day == this.day && a.start.equals(this.start) && a.end.equals(this.end);
+    public List<BlockUnit> getTimes() {
+        return times;
     }
 }
