@@ -1,0 +1,19 @@
+{
+  "name": "class-scheduling-app",
+  "version": "1.0.0",
+  "description": "Hackathon project",
+  "main": "main.js",
+  "scripts": {
+    "test": "debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2Sopab/class-scheduling-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2Sopab/class-scheduling-app/issues"
+  },
+  "homepage": "https://github.com/2Sopab/class-scheduling-app#readme"
+}
