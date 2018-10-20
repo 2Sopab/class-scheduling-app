@@ -41,7 +41,7 @@ public class Course implements Comparable<Course> {
         return this.number;
     }
 
-    public int getCreditHorus() {
+    public int getCreditHours() {
         return this.creditHours;
     }
 
