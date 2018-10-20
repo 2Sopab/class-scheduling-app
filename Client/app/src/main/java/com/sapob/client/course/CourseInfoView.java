@@ -2,7 +2,6 @@ package com.sapob.client.course;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
@@ -21,10 +20,10 @@ public class CourseInfoView extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        course = Application.getDataModel().getFromUUID(intent.getIntExtra("course_uuid", 0));
+        course = Application.getDataModel().getCourseFromUUID(intent.getIntExtra("course_uuid", 0));
 
         setContentView(R.layout.activity_course_info_view);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.anim_toolbar);
         toolbar.setTitle(course.getIdentifier());
         setSupportActionBar(toolbar);
 

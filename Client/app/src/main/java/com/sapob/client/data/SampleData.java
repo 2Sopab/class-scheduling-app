@@ -30,7 +30,7 @@ public class SampleData implements DataModel {
     }
 
     @Override
-    public Course getFromUUID(int uuid) {
+    public Course getCourseFromUUID(int uuid) {
         final int uuidRef = uuid;
         return courses.stream().filter(new Predicate<Course>() {
             @Override

@@ -70,7 +70,7 @@ public class Course implements Comparable<Course> {
             return false;
         }
         Course a = (Course)o; 
-        return this.subject.equals(a.subject) && this.number == a.number;
+        return this.subject.equals(a.subject) && this.number.equals(a.number);
     }
 
     @Override
