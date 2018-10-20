@@ -1,4 +1,4 @@
-package com.example.gwgwa.testing3;
+package com.sapob.client;
 
 import android.content.Intent;
 import android.os.Bundle;
