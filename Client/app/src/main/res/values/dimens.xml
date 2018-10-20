@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <dimen name="list_item_height">68dp</dimen>
     <dimen name="text_size_large">24sp</dimen>
-    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="app_bar_height">220dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="design_fab_size_mini" tools:override="true">52dp</dimen>
+    <dimen name="design_fab_content_size" tools:override="true">48dp</dimen>
 </resources>

@@ -94,4 +94,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta pulvinar aliquet. In hac habitasse platea dictumst. Cras nec dui tincidunt, iaculis sem ut, iaculis odio. Donec a auctor quam. Aliquam semper arcu eget ante convallis, ac feugiat augue semper. Mauris sollicitudin pulvinar erat, eu varius nisl dictum at. Ut porttitor turpis a enim imperdiet convallis. Vestibulum bibendum turpis nec justo tempus, sed tristique lorem ullamcorper. Vestibulum porta vel risus eu molestie. Vestibulum ultrices, nunc vitae malesuada commodo, velit nisl consequat lorem, id commodo ligula nibh sit amet lacus.</string>
 </resources>

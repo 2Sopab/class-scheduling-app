@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface DataModel {
     public List<Course> getCourses();
-    public Course getFromUUID(int uuid);
+    public Course getCourseFromUUID(int uuid);
 }
