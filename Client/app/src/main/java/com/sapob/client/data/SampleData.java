@@ -148,10 +148,10 @@ public class SampleData implements DataModel {
             for(int i = 0; i < blocks; ++i) {
                 List<BlockUnit> timeSlot = this.timeSlotPool.get(rand.nextInt(this.timeSlotPool.size()));
                 Block block = new Block(c, timeSlot);
-                int sections = 3 + rand.nextInt(4);
+                Professor prof = getRandomProf();
+                int sections = 2 + rand.nextInt(4);
                 for(int j = 0; j < sections; ++j) {
                     String id = (char) (charStart + 'A' + i) + String.valueOf(j + 1);
-                    Professor prof = getRandomProf();
                     Section s = new Section(id, rand.nextInt(1000000), getRandomProf(), rand.nextInt(50), block, rand.nextDouble() * 5d);
                     prof.getSections().add(s);
                     block.getSections().add(s);
