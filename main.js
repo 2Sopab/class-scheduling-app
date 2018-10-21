@@ -22,6 +22,7 @@ let app = express();
 let fetch = require('node-fetch')
 let majorArr = [];
 let majorCourseMap = new Map()
+let majorCourseSectionMap = new Map();
 
 /**
  * gets all majors-has ident(abbreviation)and name(full subject name) fields;
@@ -38,18 +39,25 @@ request.get('https://soc.courseoff.com/gatech/terms/201901/majors', (error, resp
     });
 });
 setTimeout((() => {
-    getCourses().then((majorArr) => {
-
+    getCourses(majorArr).then(() => {
+        getSections(i);
     }).catch((err) => {
         console.log(err);
-    }
+    })
 }), 2000)
+
 let getCourses = async (majors) => {
     majors.forEach((element) => {
         let response = await fetch(`https://soc.courseoff.com/gatech/terms/201901/majors/${element}/courses`)
         let courses = await response.json();
         //courses for specific major-element param
         majorCourseMap.push(element, courses);
+    })
+}
+
+let getSections = async () => {
+    majorCourseMap.forEach((element) => {
+        
     })
 }
 //loops through all majors and gets their courses, waits 5 secs for all majors to be pushed into array
@@ -75,4 +83,5 @@ setTimeout((() => {
         });
     }
 }), 7000)
+
 
