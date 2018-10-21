@@ -1,31 +1,51 @@
 package com.sapob.client.data.component;
 
+<<<<<<< HEAD
+=======
+import java.util.List;
+import java.util.ArrayList;
+
+>>>>>>> 0dfee5b0307c610fe463de768c04769cfc29faca
 public class Section {
-    private Course courseName;
-    private int CRN; 
+    private String courseName;
+    private List<Integer> CRN;
     private Professor prof;
     private int remainingSpace;
+<<<<<<< HEAD
     private Block block;
 
     public Section(Course courseName, int CRN, Professor prof, int remainingSpace, Block block) {
+=======
+    private List<Block> blocks;
+    private int rating;
+
+    public Section(String courseName, ArrayList<Integer> CRN, Professor prof, int remainingSpace, List<Block> blocks, int rating) {
+>>>>>>> 0dfee5b0307c610fe463de768c04769cfc29faca
         this.courseName = courseName;
         this.CRN = CRN;
         this.prof = prof;
         this.remainingSpace = remainingSpace;
+<<<<<<< HEAD
         this.block = block;
+=======
+        this.blocks = blocks;
+        this.rating = rating;
+>>>>>>> 0dfee5b0307c610fe463de768c04769cfc29faca
     }
     
-    public Course getCourseName() {
+    public String getCourseName() {
         return this.courseName;
     }
 
-    public int getCRN() {
+    public List<Integer> getCRN() {
         return this.CRN;
     }
 
     public Professor getProf() {
         return this.prof;
     }
+
+    public int getRating() { return this.rating; }
 
     public int getRemainingSpace() {
         return this.remainingSpace;
