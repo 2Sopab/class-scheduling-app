@@ -69,7 +69,7 @@ public class ScheduleMaker {
     public boolean checkValidity(ArrayList<Section> schedule) {
         for(int i = 0; i < schedule.size() - 1; i++) {
             for(int j = 0; j < 7; j++) {
-                ArrayList<Block> bloks = (ArrayList) schedule.get(i).getBlocks();
+                ArrayList<BlockUnit> bloks = (ArrayList) schedule.get(i).getBlock().getTimes();
                 if(bloks.get(0).getStart().compareTo(bloks.get(1).getStart()) >= 0 &&
                         bloks.get(0).getEnd().compareTo(bloks.get(1).getEnd()) <= 0)
                     return false;
@@ -78,5 +78,6 @@ public class ScheduleMaker {
                     return false;
             }
         }
+        return false;
     }
 }

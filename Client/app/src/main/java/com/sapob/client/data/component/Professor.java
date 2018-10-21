@@ -1,12 +1,14 @@
 package com.sapob.client.data.component;
 
+import java.util.List;
+
 public class Professor {
     private final String name; 
     private double GPA;
     private double rating; 
-    private Section[] sections; 
+    private List<Section> sections;
 
-    public Professor(String name, double GPA, double rating, Section[] sections) {
+    public Professor(String name, double GPA, double rating, List<Section> sections) {
         this.name = name;
         this.GPA = GPA;
         this.rating = rating;
@@ -25,7 +27,7 @@ public class Professor {
         return this.rating; 
     }
 
-    public Section[] sections() {
+    public List<Section> getSections() {
         return this.sections; 
     }
 

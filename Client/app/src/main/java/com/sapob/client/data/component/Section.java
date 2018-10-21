@@ -1,30 +1,23 @@
 package com.sapob.client.data.component;
 
-import java.util.List;
-import java.util.ArrayList;
-
 public class Section {
-    private String courseName;
-    private List<Integer> CRN;
+    private int CRN;
     private Professor prof;
     private int remainingSpace;
     private Block block;
-    private int rating;
+    private double rating;
+    private String id;
 
-    public Section(String courseName, ArrayList<Integer> CRN, Professor prof, int remainingSpace, Block block, int rating) {
-        this.courseName = courseName;
+    public Section(String id, int CRN, Professor prof, int remainingSpace, Block block, double rating) {
+        this.id = id;
         this.CRN = CRN;
         this.prof = prof;
         this.remainingSpace = remainingSpace;
         this.block = block;
         this.rating = rating;
     }
-    
-    public String getCourseName() {
-        return this.courseName;
-    }
 
-    public List<Integer> getCRN() {
+    public int getCRN() {
         return this.CRN;
     }
 
@@ -32,7 +25,11 @@ public class Section {
         return this.prof;
     }
 
-    public int getRating() { return this.rating; }
+    public String getId() {
+        return id;
+    }
+
+    public double getRating() { return this.rating; }
 
     public int getRemainingSpace() {
         return this.remainingSpace;
@@ -56,5 +53,9 @@ public class Section {
         }
         Section a = (Section)o;
         return this.CRN == a.CRN;
+    }
+
+    public String getCourseName() {
+        return this.getBlock().getCourse().getIdentifier();
     }
 }
